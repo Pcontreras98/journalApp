@@ -49,6 +49,7 @@ export const LoginPage = () => {
                   name="email"
                   value={ email }
                   onChange={ onInputChange }
+                  autoComplete="email"
                   
                 />
             </Grid>
@@ -62,6 +63,7 @@ export const LoginPage = () => {
                   name="password"
                   value={ password }
                   onChange={ onInputChange }
+                  autoComplete="current-password"
                 />
             </Grid>
 

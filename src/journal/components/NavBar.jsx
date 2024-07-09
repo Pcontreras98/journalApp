@@ -4,6 +4,7 @@ import { AppBar, Grid, IconButton, Toolbar, Typography } from '@mui/material';
 import { startLogout } from '../../store/auth/thunks';
 
 
+
 export const NavBar = ({ drawerWidth = 240 }) => {
 
   const dispatch = useDispatch();
@@ -13,6 +14,7 @@ export const NavBar = ({ drawerWidth = 240 }) => {
     dispatch( startLogout());
   }  
 
+ 
   return (
     <AppBar
         position='fixed'
@@ -31,7 +33,7 @@ export const NavBar = ({ drawerWidth = 240 }) => {
             </IconButton>
 
             <Grid container direction='row' justifyContent='space-between' alignItems='center' >
-                <Typography variant='h6' noWrap component='div'> JournalApp</Typography>
+                <Typography  style={{ cursor: 'pointer' }} variant='h6' noWrap component='div'> JournalApp</Typography>
                 <IconButton 
                     color='error'
                     onClick={ onLogout }    
